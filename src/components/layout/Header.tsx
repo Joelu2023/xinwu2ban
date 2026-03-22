@@ -35,7 +35,7 @@ export default function Header() {
             盛和塾新吴二班
           </span>
           <span className="hidden text-[11px] text-brand-muted sm:block">
-            经营者成长共同体 · 无锡新吴
+            经营者成长学习平台 · 苏州
           </span>
         </Link>
 

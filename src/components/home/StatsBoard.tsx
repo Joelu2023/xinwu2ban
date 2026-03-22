@@ -9,7 +9,7 @@ export default function StatsBoard() {
         align="center"
         eyebrow="足迹"
         title="班级数据看板"
-        lead="轻量、温暖的数据呈现，记录共同体的成长足迹。后续可接入真实统计，让「我们一起走了多远」可被感知。"
+        lead="轻量、温暖的数据呈现，记录学习平台的成长足迹。后续可接入真实统计，让「我们一起走了多远」可被感知。"
       />
 
       <div className="mx-auto mt-16 max-w-5xl">

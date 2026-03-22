@@ -10,13 +10,13 @@ export default function HeroSection() {
         <div className="grid items-start gap-14 lg:grid-cols-[minmax(0,1fr)_280px] lg:gap-16">
           <div className="min-w-0">
             <p className="text-[11px] font-medium tracking-[0.4em] text-brand-secondary/90">
-              无锡新吴 · 经营者学习共同体
+              苏州 · 经营者学习平台
             </p>
 
             <h1 className="mt-6 font-serif text-[2.35rem] font-semibold leading-[1.15] tracking-[0.04em] text-brand-primary sm:text-5xl lg:text-[3.15rem]">
-              盛和塾
+              苏州盛和塾
               <span className="relative ms-2 inline-block whitespace-nowrap sm:ms-3">
-                <span className="relative z-10">新吴二班</span>
+                <span className="relative z-10">经营者学习平台</span>
                 <span
                   className="absolute -bottom-1 left-0 right-0 h-[2px] bg-brand-accent/45 sm:-bottom-1.5"
                   aria-hidden
@@ -25,7 +25,7 @@ export default function HeroSection() {
             </h1>
 
             <p className="mt-6 max-w-xl font-serif text-xl font-medium text-brand-secondary sm:text-2xl sm:leading-snug">
-              一群经营者的长期主义成长共同体
+              一群经营者的长期主义成长学习平台
             </p>
 
             <p className="inner-prose mt-10 max-w-lg text-[15px] text-brand-muted sm:text-base">

@@ -24,17 +24,17 @@ export default function About() {
       <PageIntro
         eyebrow="班级"
         title="关于新吴二班"
-        lead="盛和塾新吴二班，是一群经营者、管理者和成长同行者组成的学习共同体。我们相信，真正有力量的学习，不只是知识输入，而是认知的改变、行动的发生、经营的改善与人生的成长。"
+        lead="盛和塾新吴二班，是一群经营者、管理者和成长同行者组成的学习平台。我们相信，真正有力量的学习，不只是知识输入，而是认知的改变、行动的发生、经营的改善与人生的成长。"
       />
 
       <SectionShell className="bg-brand-canvas">
         <InnerSectionTitle
           kicker="相识"
           title="班级简介"
-          subtitle="新吴二班以「班级官网 + 三年成长平台 + 学习成果沉淀平台 + 班级运营中枢」为定位，面向企业经营者学习共同体，承载班级文化、成长体系、学习沉淀、成员连接、活动运营与成果案例。"
+          subtitle="新吴二班以「班级官网 + 三年成长平台 + 学习成果沉淀平台 + 班级运营中枢」为定位，面向企业经营者学习平台，承载班级文化、成长体系、学习沉淀、成员连接、活动运营与成果案例。"
         />
         <p className="inner-prose mt-10 max-w-3xl text-sm leading-[2] text-brand-muted md:text-[15px]">
-          我们刻意保持页面的克制与留白：不是为了热闹展示，而是为了把「共同体」的温度与长期主义的笃定，慢慢读进去。
+          我们刻意保持页面的克制与留白：不是为了热闹展示，而是为了把「学习平台」的温度与长期主义的笃定，慢慢读进去。
         </p>
       </SectionShell>
 
@@ -67,7 +67,7 @@ export default function About() {
               班级愿景
             </h2>
             <p className="inner-prose mt-5 text-sm leading-[2] text-brand-muted md:text-[15px]">
-              建设一个真正能让经营者彼此成就、共同进步、持续沉淀成果的成长共同体。
+              建设一个真正能让经营者彼此成就、共同进步、持续沉淀成果的成长学习平台。
             </p>
           </div>
         </div>
@@ -118,7 +118,7 @@ export default function About() {
         <InnerSectionTitle
           kicker="约定"
           title="班级公约"
-          subtitle="公约的意义，是把「共同体」从情绪认同，落实为可执行的相处方式。"
+          subtitle="公约的意义，是把「学习平台」从情绪认同，落实为可执行的相处方式。"
         />
         <div className="mt-12 max-w-3xl border-l-2 border-brand-accent/45 pl-6 md:pl-8">
           <ul className="space-y-4 text-sm leading-[2] text-brand-muted md:text-[15px]">
