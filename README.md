@@ -1,4 +1,19 @@
-# React + TypeScript + Vite
+# 盛和塾新吴二班 · 班级网站
+
+React + TypeScript + Vite + Tailwind CSS + React Router。**公网部署（https）请按 [DEPLOY.md](./DEPLOY.md) 使用 Vercel。**
+
+## 本地开发
+
+```bash
+npm install
+npm run dev
+```
+
+浏览器访问终端提示的本地地址（一般为 `http://localhost:5173`）。
+
+---
+
+## 模板说明（Vite 默认 README）
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
