@@ -1,0 +1,112 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-primary: #1f3a4a;
+  --color-brand-secondary: #2e4c5d;
+  --color-brand-accent: #b88a44;
+  --color-brand-canvas: #f7f3ec;
+  --color-brand-surface: #ffffff;
+  --color-brand-text: #222222;
+  --color-brand-muted: #6b6b6b;
+  --color-brand-border: #ddd6c8;
+  --font-sans: ui-sans-serif, system-ui, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', sans-serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-brand-canvas text-brand-text font-sans antialiased;
+    text-rendering: optimizeLegibility;
+    font-feature-settings:
+      'kern' 1,
+      'liga' 1;
+  }
+
+  /* 中文标题：衬线略松字距，避免挤作一团 */
+  .font-serif {
+    letter-spacing: 0.02em;
+  }
+}
+
+/* 首页气质：纸感、墨色、暖金点缀（仅样式，无重动效） */
+@layer components {
+  .home-root {
+    --home-line: color-mix(in srgb, var(--color-brand-border) 85%, transparent);
+  }
+
+  .home-hero-bg {
+    background-color: var(--color-brand-surface);
+    background-image:
+      radial-gradient(
+        ellipse 120% 80% at 100% 0%,
+        color-mix(in srgb, var(--color-brand-accent) 14%, transparent) 0%,
+        transparent 55%
+      ),
+      radial-gradient(
+        ellipse 90% 60% at 0% 100%,
+        color-mix(in srgb, var(--color-brand-primary) 6%, transparent) 0%,
+        transparent 50%
+      ),
+      linear-gradient(180deg, #fdfbf7 0%, var(--color-brand-canvas) 100%);
+  }
+
+  .home-title-mark {
+    background: linear-gradient(
+      180deg,
+      var(--color-brand-accent) 0%,
+      color-mix(in srgb, var(--color-brand-accent) 45%, white) 100%
+    );
+  }
+
+  .home-card-quiet {
+    @apply border border-brand-border/90 bg-brand-surface/95 shadow-none transition-[box-shadow,transform] duration-300;
+  }
+
+  .home-card-quiet:hover {
+    /* 轻抬升即可，避免电商卡片式强阴影 */
+    @apply shadow-[0_10px_36px_-28px_rgba(31,58,74,0.22)];
+  }
+
+  .home-placeholder {
+    @apply rounded-lg border border-brand-border/70 bg-gradient-to-br from-brand-canvas to-brand-canvas/40;
+  }
+
+  /* 内页页头：轻纸感，克制渐变 */
+  .page-intro-bg {
+    background-color: var(--color-brand-surface);
+    background-image:
+      radial-gradient(
+        ellipse 100% 70% at 0% 0%,
+        color-mix(in srgb, var(--color-brand-accent) 10%, transparent) 0%,
+        transparent 52%
+      ),
+      linear-gradient(180deg, #fdfbf7 0%, var(--color-brand-canvas) 100%);
+  }
+
+  /*
+   * 中文正文节奏：行长、行高、字距一体控制
+   * ——偏杂志/读本，而非横幅标语或教务通知栏
+   */
+  .inner-prose {
+    text-wrap: pretty;
+    line-height: 2;
+    letter-spacing: 0.01em;
+    font-variant-east-asian: proportional-width;
+  }
+
+  @supports (hanging-punctuation: first allow-end) {
+    .inner-prose {
+      hanging-punctuation: first allow-end last allow-end;
+    }
+  }
+
+  /* 内页主内容区：略增呼吸感（与顶底留白衔接） */
+  .site-content {
+    @apply bg-brand-canvas/40;
+  }
+}
