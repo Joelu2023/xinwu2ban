@@ -1,4 +1,5 @@
 import SectionShell from '../ui/SectionShell'
+import ImageSlot from '../ui/ImageSlot'
 import HomeSectionHeader from './HomeSectionHeader'
 
 const bullets = [
@@ -38,7 +39,12 @@ export default function MonthlyFocus() {
           <p className="mt-5 max-w-xl text-sm leading-[1.85] text-brand-muted">
             以利他之心审视客户与组织关系，推动团队共识与协同落地。
           </p>
-          <div className="home-placeholder mt-8 min-h-[140px] flex-1" />
+          <ImageSlot
+            src="/images/home/monthly-focus-01.png"
+            alt="本月课程主题配图"
+            ratio="16/9"
+            className="mt-8 w-full max-w-xl border-brand-border/60"
+          />
         </div>
 
         <div className="flex flex-col gap-6 lg:col-span-5">
@@ -73,7 +79,12 @@ export default function MonthlyFocus() {
             优秀作业 / 优秀分享
           </p>
           <div className="mt-5 grid gap-6 md:grid-cols-[1.2fr_1fr] md:items-center">
-            <div className="home-placeholder aspect-video w-full md:aspect-auto md:min-h-[200px]" />
+            <ImageSlot
+              src="/images/home/monthly-share-01.png"
+              alt="优秀作业与分享配图"
+              ratio="16/9"
+              className="w-full border-brand-border/60 md:min-h-[200px] md:aspect-auto"
+            />
             <div>
               <p className="font-serif text-base text-brand-primary">
                 预留展示位

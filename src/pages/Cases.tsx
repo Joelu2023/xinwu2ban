@@ -1,6 +1,7 @@
 import PageIntro from '../components/ui/PageIntro'
 import SectionShell from '../components/ui/SectionShell'
 import InnerSectionTitle from '../components/ui/InnerSectionTitle'
+import ImageSlot from '../components/ui/ImageSlot'
 
 const categories = [
   '企业经营改善案例',
@@ -13,6 +14,7 @@ const categories = [
 const sampleCase = {
   title: '示例案例标题（占位）',
   category: '企业经营改善案例',
+  cover: '/images/cases/cases-detail-01.png',
   sections: [
     { k: '背景', v: '企业阶段、行业环境与经营目标简述。' },
     { k: '问题', v: '当时最关键的经营或组织痛点。' },
@@ -79,11 +81,16 @@ export default function Cases() {
               </div>
             ))}
           </div>
-          <div className="home-placeholder mt-10 min-h-[10rem]" />
+          <ImageSlot
+            src={sampleCase.cover}
+            alt="案例结构示范封面"
+            ratio="16/9"
+            className="mt-10"
+          />
         </div>
 
         <div className="mt-12 grid gap-8 md:grid-cols-2">
-          {categories.slice(0, 4).map((c) => (
+          {categories.slice(0, 4).map((c, idx) => (
             <article
               key={c}
               className="home-card-quiet flex flex-col rounded-2xl p-8 md:p-9"
@@ -97,7 +104,12 @@ export default function Cases() {
               <p className="inner-prose mt-3 flex-1 text-sm leading-[2] text-brand-muted md:text-[15px]">
                 背景 / 问题 / 行动 / 改变 / 感悟 结构展示；后续接入列表与详情页。
               </p>
-              <div className="home-placeholder mt-6 min-h-[6rem]" />
+              <ImageSlot
+                src={`/images/cases/cases-list-0${idx + 1}.png`}
+                alt={`${c}列表封面`}
+                ratio="4/3"
+                className="mt-6"
+              />
             </article>
           ))}
         </div>

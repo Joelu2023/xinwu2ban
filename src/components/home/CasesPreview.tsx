@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import SectionShell from '../ui/SectionShell'
 import HomeSectionHeader from './HomeSectionHeader'
 import { previewCases } from '../../data/placeholders'
+import ImageSlot from '../ui/ImageSlot'
 
 export default function CasesPreview() {
   return (
@@ -29,7 +30,12 @@ export default function CasesPreview() {
                 {c.summary}
               </p>
             </div>
-            <div className="home-placeholder mx-7 mb-7 h-36 md:mx-8 md:mb-8" />
+            <ImageSlot
+              src={c.cover}
+              alt={`${c.title}封面`}
+              ratio="4/3"
+              className="mx-7 mb-7 md:mx-8 md:mb-8"
+            />
           </article>
         ))}
       </div>

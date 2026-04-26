@@ -2,6 +2,7 @@ import PageIntro from '../components/ui/PageIntro'
 import SectionShell from '../components/ui/SectionShell'
 import InnerSectionTitle from '../components/ui/InnerSectionTitle'
 import { previewMembers } from '../data/placeholders'
+import ImageSlot from '../components/ui/ImageSlot'
 
 const keywords = [
   '利他经营',
@@ -20,6 +21,7 @@ const roster = [
     company: '示例服务公司',
     industry: '专业服务',
     keywords: ['知行合一', '长期主义'],
+    avatar: '/images/members/member-05.png',
   },
 ] as const
 
@@ -45,9 +47,12 @@ export default function Members() {
               className="home-card-quiet rounded-2xl p-7 md:p-8"
             >
               <div className="flex gap-5">
-                <div className="flex h-[4.25rem] w-[4.25rem] shrink-0 items-center justify-center rounded-full border-2 border-brand-border/90 bg-brand-canvas/80 font-serif text-sm text-brand-muted ring-2 ring-brand-accent/15 ring-offset-2 ring-offset-brand-surface">
-                  像
-                </div>
+                <ImageSlot
+                  src={m.avatar}
+                  alt={`${m.name}头像`}
+                  ratio="1/1"
+                  className="h-[4.25rem] w-[4.25rem] shrink-0 rounded-full ring-2 ring-brand-accent/15 ring-offset-2 ring-offset-brand-surface"
+                />
                 <div className="min-w-0">
                   <p className="text-[15px] font-medium text-brand-text">{m.name}</p>
                   <p className="mt-1.5 text-xs leading-relaxed text-brand-muted">
@@ -83,7 +88,12 @@ export default function Members() {
           title="企业介绍"
           subtitle="企业一页纸、主营业务、发展阶段与当下课题，将在此以图文形式沉淀。建议后续与成果案例库互通，避免信息重复维护。"
         />
-        <div className="home-placeholder mt-12 min-h-[12rem] md:min-h-[14rem]" />
+        <ImageSlot
+          src="/images/members/members-company-01.png"
+          alt="企业介绍封面"
+          ratio="16/9"
+          className="mt-12 md:max-w-4xl"
+        />
       </SectionShell>
 
       <SectionShell className="bg-brand-canvas">
@@ -117,7 +127,12 @@ export default function Members() {
             <p className="inner-prose mt-4 text-sm leading-[2] text-brand-muted md:text-[15px]">
               从困惑到行动，从行动到改变——同学故事用于呈现真实心路与实践路径（正文占位）。
             </p>
-            <div className="home-placeholder mt-8 min-h-[9rem]" />
+            <ImageSlot
+              src="/images/members/members-story-01.png"
+              alt="同学故事图片一"
+              ratio="16/9"
+              className="mt-8"
+            />
           </article>
           <article className="home-card-quiet rounded-2xl p-8 md:p-9">
             <h3 className="font-serif text-lg font-semibold text-brand-primary">
@@ -126,7 +141,12 @@ export default function Members() {
             <p className="inner-prose mt-4 text-sm leading-[2] text-brand-muted md:text-[15px]">
               彼此看见的前提是愿意打开经营现场；彼此成就的基础是持续的利他分享（正文占位）。
             </p>
-            <div className="home-placeholder mt-8 min-h-[9rem]" />
+            <ImageSlot
+              src="/images/members/members-story-02.png"
+              alt="同学故事图片二"
+              ratio="16/9"
+              className="mt-8"
+            />
           </article>
         </div>
         <figure className="mx-auto mt-16 max-w-xl border-t border-brand-border/70 pt-12 text-center">

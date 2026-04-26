@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import PageIntro from '../components/ui/PageIntro'
 import SectionShell from '../components/ui/SectionShell'
 import InnerSectionTitle from '../components/ui/InnerSectionTitle'
+import ImageSlot from '../components/ui/ImageSlot'
 
 const types = [
   '课程学习',
@@ -13,9 +14,24 @@ const types = [
 ] as const
 
 const past = [
-  { title: '主题交流纪要', date: 'YYYY 年 MM 月', note: '占位条目' },
-  { title: '企业参访手记', date: 'YYYY 年 MM 月', note: '占位条目' },
-  { title: '读书会摘要', date: 'YYYY 年 MM 月', note: '占位条目' },
+  {
+    title: '主题交流纪要',
+    date: 'YYYY 年 MM 月',
+    note: '占位条目',
+    image: '/images/activities/activities-review-01.png',
+  },
+  {
+    title: '企业参访手记',
+    date: 'YYYY 年 MM 月',
+    note: '占位条目',
+    image: '/images/activities/activities-review-02.png',
+  },
+  {
+    title: '读书会摘要',
+    date: 'YYYY 年 MM 月',
+    note: '占位条目',
+    image: '/images/activities/activities-review-03.png',
+  },
 ] as const
 
 export default function Activities() {
@@ -97,7 +113,12 @@ export default function Activities() {
                 {x.title}
               </h3>
               <p className="mt-2 text-xs text-brand-muted">{x.note}</p>
-              <div className="home-placeholder mt-6 min-h-[7rem] flex-1" />
+              <ImageSlot
+                src={x.image}
+                alt={`${x.title}回顾图片`}
+                ratio="16/9"
+                className="mt-6"
+              />
             </article>
           ))}
         </div>

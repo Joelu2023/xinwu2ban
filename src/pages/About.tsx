@@ -1,6 +1,7 @@
 import PageIntro from '../components/ui/PageIntro'
 import SectionShell from '../components/ui/SectionShell'
 import InnerSectionTitle from '../components/ui/InnerSectionTitle'
+import ImageSlot from '../components/ui/ImageSlot'
 
 const values = [
   '敬天爱人',
@@ -17,6 +18,8 @@ const charter = [
   '利他分享，彼此成就',
   '长期同行，不急功近利',
 ] as const
+
+const roles = ['班委统筹', '学习运营', '活动组织', '文宣沉淀'] as const
 
 export default function About() {
   return (
@@ -97,7 +100,7 @@ export default function About() {
           subtitle="班委分工、职能小组与协作机制的具体说明将在此沉淀。建议后续补充：班长、学习委员、活动委员、文宣与资料、财务与后勤等角色与职责。"
         />
         <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-          {['班委统筹', '学习运营', '活动组织', '文宣沉淀'].map((role) => (
+          {roles.map((role, idx) => (
             <div
               key={role}
               className="home-card-quiet rounded-2xl p-6 text-center md:p-7"
@@ -105,7 +108,12 @@ export default function About() {
               <p className="text-sm font-medium tracking-wide text-brand-primary">
                 {role}
               </p>
-              <div className="home-placeholder mx-auto mt-5 h-20 w-full max-w-[8rem]" />
+              <ImageSlot
+                src={`/images/about/about-roles-0${idx + 1}.png`}
+                alt={`${role}模块图片`}
+                ratio="1/1"
+                className="mx-auto mt-5 h-20 w-full max-w-[8rem]"
+              />
               <p className="mt-4 text-xs leading-relaxed text-brand-muted">
                 职责与成员 · 占位
               </p>

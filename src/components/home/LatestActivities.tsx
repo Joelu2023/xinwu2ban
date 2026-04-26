@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import SectionShell from '../ui/SectionShell'
 import HomeSectionHeader from './HomeSectionHeader'
 import { previewActivities } from '../../data/placeholders'
+import ImageSlot from '../ui/ImageSlot'
 
 export default function LatestActivities() {
   return (
@@ -33,7 +34,12 @@ export default function LatestActivities() {
             <p className="mt-3 flex-1 text-sm leading-[1.85] text-brand-muted">
               {a.desc}
             </p>
-            <div className="home-placeholder mt-6 h-32" />
+            <ImageSlot
+              src={a.cover}
+              alt={`${a.title}活动现场`}
+              ratio="16/9"
+              className="mt-6"
+            />
           </article>
         ))}
       </div>

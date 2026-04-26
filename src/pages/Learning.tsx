@@ -1,27 +1,33 @@
 import PageIntro from '../components/ui/PageIntro'
 import SectionShell from '../components/ui/SectionShell'
 import InnerSectionTitle from '../components/ui/InnerSectionTitle'
+import ImageSlot from '../components/ui/ImageSlot'
 
 const blocks = [
   {
     title: '课程主题库',
     desc: '按阶段归档课程主题、讲义摘要与延伸阅读，形成可检索的班级知识索引。',
+    image: '/images/learning/learning-course-01.png',
   },
   {
     title: '读书分享',
     desc: '读书会材料、讨论提纲与优秀分享稿，支持重复学习与二次传播。',
+    image: '/images/learning/learning-reading-01.png',
   },
   {
     title: '课程笔记',
     desc: '同学笔记精选与结构模板，帮助后来者更快进入学习状态。',
+    image: '/images/learning/learning-notes-01.png',
   },
   {
     title: '优秀作业',
     desc: '复盘、实践报告与课题作业的优秀范例，强调可借鉴而非攀比。',
+    image: '/images/learning/learning-homework-01.png',
   },
   {
     title: '学习地图',
     desc: '三年能力路径与主题地图，帮助个人对照成长节奏与输出节奏。',
+    image: '/images/learning/learning-map-01.png',
   },
 ] as const
 
@@ -53,7 +59,12 @@ export default function Learning() {
               <p className="inner-prose mt-4 flex-1 text-sm leading-[2] text-brand-muted md:text-[15px]">
                 {b.desc}
               </p>
-              <div className="home-placeholder mt-8 min-h-[6.5rem]" />
+              <ImageSlot
+                src={b.image}
+                alt={`${b.title}模块封面`}
+                ratio="16/9"
+                className="mt-8"
+              />
               <p className="mt-3 text-center text-[11px] tracking-[0.15em] text-brand-muted">
                 内容列表占位
               </p>
@@ -69,7 +80,12 @@ export default function Learning() {
                   {blocks[4].desc}
                 </p>
               </div>
-              <div className="home-placeholder mt-8 min-h-[8rem] flex-1 md:mt-0 md:max-w-md" />
+              <ImageSlot
+                src={blocks[4].image}
+                alt="学习地图示意图"
+                ratio="4/3"
+                className="mt-8 flex-1 md:mt-0 md:max-w-md"
+              />
             </div>
             <p className="mt-6 text-center text-[11px] tracking-[0.15em] text-brand-muted md:text-left">
               后续接入资料库与权限分级

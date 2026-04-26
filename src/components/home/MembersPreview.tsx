@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import SectionShell from '../ui/SectionShell'
 import HomeSectionHeader from './HomeSectionHeader'
 import { previewMembers } from '../../data/placeholders'
+import ImageSlot from '../ui/ImageSlot'
 
 export default function MembersPreview() {
   return (
@@ -18,9 +19,12 @@ export default function MembersPreview() {
             key={`${m.name}-${idx}`}
             className="home-card-quiet rounded-2xl border border-brand-border/80 bg-brand-surface/90 p-6 text-center md:p-7"
           >
-            <div className="mx-auto flex h-[4.5rem] w-[4.5rem] items-center justify-center rounded-full border-2 border-brand-border/90 bg-brand-canvas/80 ring-2 ring-brand-accent/20 ring-offset-2 ring-offset-brand-surface">
-              <span className="font-serif text-sm text-brand-muted">像</span>
-            </div>
+            <ImageSlot
+              src={m.avatar}
+              alt={`${m.name}头像`}
+              ratio="1/1"
+              className="mx-auto h-[4.5rem] w-[4.5rem] rounded-full ring-2 ring-brand-accent/20 ring-offset-2 ring-offset-brand-surface"
+            />
             <p className="mt-5 text-[15px] font-medium text-brand-text">{m.name}</p>
             <p className="mt-1.5 text-xs leading-relaxed text-brand-muted">
               {m.company}
